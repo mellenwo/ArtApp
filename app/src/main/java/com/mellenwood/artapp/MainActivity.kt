@@ -1,4 +1,4 @@
-package com.mellenwood.myapplication
+package com.mellenwood.artapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

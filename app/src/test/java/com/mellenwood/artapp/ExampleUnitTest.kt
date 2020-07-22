@@ -1,4 +1,4 @@
-package com.mellenwood.myapplication
+package com.mellenwood.artapp
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
