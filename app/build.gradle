@@ -30,6 +30,12 @@ dependencies {
     implementation Dependencies.androidXCoreLibrary
     implementation Dependencies.appCompatLibrary
     implementation Dependencies.constratintLayoutLibrary
+    implementation Dependencies.koinLibrary
+    implementation Dependencies.koinScopeLibrary
+    implementation Dependencies.koinFragmentLibrary
+    implementation Dependencies.koinViewModelLibrary
+    implementation Dependencies.koinExperimentalLibrary
+    testImplementation Dependencies.koinTestLibary
     testImplementation Dependencies.jUnitLibrary
     androidTestImplementation Dependencies.jUnitTestLibrary
     androidTestImplementation Dependencies.espressoLibrary
