@@ -1,0 +1,15 @@
+object BuildDependenciesVersions {
+    const val KOTLIN = "1.3.72"
+    const val ANDROIDX = "1.3.0"
+    const val APPCOMPAT = "1.1.0"
+    const val CONSTRAINT_LAYOUT = "1.1.3"
+    const val JUNIT_TEST = "1.1.1"
+    const val JUNIT = "4.12"
+    const val ESPRESSO = "3.2.0"
+    const val KOIN = "2.1.6"
+    const val LIFECYCLE = "2.2.0"
+    const val FRAGMENT_KTX = "1.2.5"
+    const val RECYCLER_VIEW = "1.1.0"
+    const val NAVIGATION = "2.3.0"
+    const val PAGING = "2.1.1"
+}
