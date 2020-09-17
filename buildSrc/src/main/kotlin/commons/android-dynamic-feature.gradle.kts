@@ -11,7 +11,7 @@ android {
     compileSdkVersion(29)
 
     defaultConfig {
-        minSdkVersion(17)
+        minSdkVersion(21)
         targetSdkVersion(29)
     }
 
@@ -22,6 +22,14 @@ android {
 
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    dataBinding {
+        isEnabled = true
+    }
+
+    androidExtensions {
+        isExperimental = true
     }
 
     sourceSets {
