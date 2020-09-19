@@ -8,4 +8,8 @@ object BuildModules {
         const val UI = ":commons:ui"
         const val VIEWS = ":commons:views"
     }
+
+    object Features {
+        const val HOME = ":features:home"
+    }
 }

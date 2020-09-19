@@ -29,6 +29,28 @@ android {
             isMinifyEnabled = false
         }
     }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    dataBinding {
+        isEnabled = true
+    }
+
+    androidExtensions {
+        isExperimental = true
+    }
+
+    dynamicFeatures = mutableSetOf(
+        BuildModules.Features.HOME
+    )
+
+    sourceSets {
+        getByName("main") {
+            java.srcDir("src/main/kotlin")
+        }
+    }
 }
 
 dependencies {
@@ -41,6 +63,8 @@ dependencies {
     implementation (Dependencies.KOIN_FRAGMENT)
     implementation (Dependencies.KOIN_VIEWMODEL)
     implementation (Dependencies.KOIN_EXPERIMENTAL)
+    implementation("androidx.navigation:navigation-fragment-ktx:2.1.0")
+    implementation("androidx.navigation:navigation-ui-ktx:2.1.0")
     testImplementation (Dependencies.KOIN_TEST)
     testImplementation (Dependencies.JUNIT)
     androidTestImplementation (Dependencies.JUNIT_EXT)
