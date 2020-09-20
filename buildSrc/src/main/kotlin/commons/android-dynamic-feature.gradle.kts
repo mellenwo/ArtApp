@@ -1,5 +1,10 @@
 package commons
 
+import BuildModules
+import Dependencies
+import dependencies.AnnotationProcessorsDependencies
+import extensions.addTestDependencies
+
 plugins {
     id("com.android.dynamic-feature")
     id("kotlin-android")
@@ -52,4 +57,14 @@ dependencies {
     implementation(Dependencies.COROUTINES)
     implementation(Dependencies.COROUTINES_ANDROID)
     implementation(Dependencies.TIMBER)
+    implementation(Dependencies.NAVIGATION_FRAGMENT)
+    implementation(Dependencies.NAVIGATION_UI)
+    implementation(Dependencies.CORE_KTX)
+    implementation(Dependencies.FRAGMENT_KTX)
+    implementation(Dependencies.CONSTRAINT_LAYOUT)
+
+    kapt(AnnotationProcessorsDependencies.DATABINDING)
+
+    addTestDependencies()
+
 }

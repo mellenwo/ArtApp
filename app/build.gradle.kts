@@ -58,6 +58,7 @@ dependencies {
     implementation (Dependencies.ANDROIDX_CORE)
     implementation (Dependencies.APPCOMPAT)
     implementation (Dependencies.CONSTRAINT_LAYOUT)
+    implementation (Dependencies.PLAY_CORE)
     implementation (Dependencies.KOIN_CORE)
     implementation (Dependencies.KOIN_SCOPE)
     implementation (Dependencies.KOIN_FRAGMENT)

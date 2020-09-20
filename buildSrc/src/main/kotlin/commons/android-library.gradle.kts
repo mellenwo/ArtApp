@@ -1,5 +1,7 @@
 package commons
 
+import Dependencies
+import extensions.addTestDependencies
 
 plugins {
     id("com.android.library")
@@ -44,4 +46,6 @@ dependencies {
     implementation(Dependencies.COROUTINES)
     implementation(Dependencies.COROUTINES_ANDROID)
     implementation(Dependencies.TIMBER)
+
+    addTestDependencies()
 }
