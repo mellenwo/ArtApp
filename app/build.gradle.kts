@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
+
 plugins {
     id(BuildPlugins.ANDROID_APPLICATION)
     id(BuildPlugins.KOTLIN_ANDROID)
@@ -64,6 +66,7 @@ dependencies {
     implementation (Dependencies.KOIN_FRAGMENT)
     implementation (Dependencies.KOIN_VIEWMODEL)
     implementation (Dependencies.KOIN_EXPERIMENTAL)
+    implementation ("com.google.dagger:hilt-android:2.28-alpha")
     implementation("androidx.navigation:navigation-fragment-ktx:2.1.0")
     implementation("androidx.navigation:navigation-ui-ktx:2.1.0")
     testImplementation (Dependencies.KOIN_TEST)

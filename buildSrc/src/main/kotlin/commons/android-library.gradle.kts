@@ -46,6 +46,7 @@ dependencies {
     implementation(Dependencies.COROUTINES)
     implementation(Dependencies.COROUTINES_ANDROID)
     implementation(Dependencies.TIMBER)
+    kapt("com.google.dagger:hilt-android-compiler:2.28-alpha")
 
     addTestDependencies()
 }
