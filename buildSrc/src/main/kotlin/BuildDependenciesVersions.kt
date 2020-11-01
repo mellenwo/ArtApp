@@ -1,4 +1,6 @@
 object BuildDependenciesVersions {
+    const val HILT_PLUGIN = "2.28.3-alpha"
+    const val HILT = "2.28-alpha"
     const val KOTLIN = "1.3.72"
     const val ANDROIDX = "1.3.0"
     const val APPCOMPAT = "1.1.0"
