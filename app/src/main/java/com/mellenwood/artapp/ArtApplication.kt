@@ -1,6 +1,7 @@
 package com.mellenwood.artapp
 
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 
-class ArtApplication : Application() {
-}
+@HiltAndroidApp
+class ArtApplication : Application()

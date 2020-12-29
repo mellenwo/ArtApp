@@ -1,5 +1,7 @@
 object BuildDependenciesVersions {
-    const val HILT_PLUGIN = "2.28.3-alpha"
+    const val HILT_PLUGIN = "2.30.1-alpha"
+    const val HILT_JETPACK = "1.0.0-alpha02"
+    const val HILT_ANNOTATION_PROCESSOR = "1.0.0-alpha02"
     const val HILT = "2.28-alpha"
     const val KOTLIN = "1.3.72"
     const val ANDROIDX = "1.3.0"
@@ -15,6 +17,7 @@ object BuildDependenciesVersions {
     const val CORE_KTX = "1.1.0"
     const val FRAGMENT_KTX = "1.2.5"
     const val RECYCLER_VIEW = "1.1.0"
+    const val SWIPE_REFRESH_LAYOUT = "1.1.0"
     const val NAVIGATION = "2.3.0"
     const val PAGING = "2.1.1"
     const val DATABINDING = "3.1.4"

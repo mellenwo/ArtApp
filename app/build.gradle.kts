@@ -1,4 +1,3 @@
-import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
 
 plugins {
     id(BuildPlugins.ANDROID_APPLICATION)
@@ -26,6 +25,11 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
@@ -45,7 +49,7 @@ android {
     }
 
     dynamicFeatures = mutableSetOf(
-        BuildModules.Features.HOME
+        BuildModules.Features.HOME, BuildModules.Features.ART_LIST
     )
 
     sourceSets {
@@ -61,12 +65,9 @@ dependencies {
     implementation (Dependencies.APPCOMPAT)
     implementation (Dependencies.CONSTRAINT_LAYOUT)
     implementation (Dependencies.PLAY_CORE)
-    implementation (Dependencies.KOIN_CORE)
-    implementation (Dependencies.KOIN_SCOPE)
-    implementation (Dependencies.KOIN_FRAGMENT)
-    implementation (Dependencies.KOIN_VIEWMODEL)
-    implementation (Dependencies.KOIN_EXPERIMENTAL)
     implementation (Dependencies.HILT)
+    implementation (Dependencies.HILT_JETPACK)
+//    kapt(Dependencies.HILT_ANNOTATION_PROCESSOR)
     implementation(Dependencies.NAVIGATION_FRAGMENT)
     implementation(Dependencies.NAVIGATION_UI)
     testImplementation (Dependencies.KOIN_TEST)

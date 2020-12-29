@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     `java-gradle-plugin`
     `kotlin-dsl`
@@ -21,7 +23,7 @@ object PluginsVersions {
 dependencies {
     implementation("com.android.tools.build:gradle:${PluginsVersions.GRADLE_ANDROID}")
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:${PluginsVersions.KOTLIN}")
-    implementation("com.google.dagger:hilt-android-gradle-plugin:2.28.3-alpha")
+    implementation("com.google.dagger:hilt-android-gradle-plugin:2.30.1-alpha")
 }
 
 

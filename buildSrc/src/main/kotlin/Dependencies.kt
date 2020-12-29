@@ -1,4 +1,6 @@
 object Dependencies {
+    const val HILT_JETPACK = "androidx.hilt:hilt-lifecycle-viewmodel:${BuildDependenciesVersions.HILT_JETPACK}"
+    const val HILT_ANNOTATION_PROCESSOR = "androidx.hilt:hilt-compiler:${BuildDependenciesVersions.HILT_ANNOTATION_PROCESSOR}"
     const val HILT_PLUGIN = "com.google.dagger:hilt-android-gradle-plugin:${BuildDependenciesVersions.HILT_PLUGIN}"
     const val HILT = "com.google.dagger:hilt-android:${BuildDependenciesVersions.HILT}"
     const val KOTLIN = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${BuildDependenciesVersions.KOTLIN}"
@@ -14,6 +16,7 @@ object Dependencies {
     const val CORE_KTX = "androidx.core:core-ktx:${BuildDependenciesVersions.CORE_KTX}"
     const val KOIN_CORE = "org.koin:koin-core:${BuildDependenciesVersions.KOIN}"
     const val KOIN_TEST = "org.koin:koin-test:${BuildDependenciesVersions.KOIN}"
+    const val SWIPE_REFRESH_LAYOUT = "androidx.swiperefreshlayout:swiperefreshlayout:${BuildDependenciesVersions.SWIPE_REFRESH_LAYOUT}"
     const val KOIN_SCOPE = "org.koin:koin-androidx-scope:${BuildDependenciesVersions.KOIN}"
     const val KOIN_VIEWMODEL = "org.koin:koin-androidx-viewmodel:${BuildDependenciesVersions.KOIN}"
     const val KOIN_FRAGMENT = "org.koin:koin-androidx-fragment:${BuildDependenciesVersions.KOIN}"

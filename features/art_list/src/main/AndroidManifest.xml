@@ -1,11 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:dist="http://schemas.android.com/apk/distribution"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.mellenwood.dynamicfeatures.home">
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.mellenwood.dynamicfeatures.artlist">
 
     <dist:module
         dist:instant="true"
-        dist:title="@string/feature_home">
+        dist:title="@string/feature_art_list">
         <dist:delivery>
             <dist:install-time />
         </dist:delivery>
