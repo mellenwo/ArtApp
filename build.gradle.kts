@@ -9,8 +9,4 @@ buildscript {
         jcenter()
         google()
     }
-
-    dependencies {
-        classpath(Dependencies.HILT_PLUGIN)
-    }
 }

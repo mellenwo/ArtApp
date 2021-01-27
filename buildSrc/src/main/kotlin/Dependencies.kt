@@ -1,8 +1,4 @@
 object Dependencies {
-    const val HILT_JETPACK = "androidx.hilt:hilt-lifecycle-viewmodel:${BuildDependenciesVersions.HILT_JETPACK}"
-    const val HILT_ANNOTATION_PROCESSOR = "androidx.hilt:hilt-compiler:${BuildDependenciesVersions.HILT_ANNOTATION_PROCESSOR}"
-    const val HILT_PLUGIN = "com.google.dagger:hilt-android-gradle-plugin:${BuildDependenciesVersions.HILT_PLUGIN}"
-    const val HILT = "com.google.dagger:hilt-android:${BuildDependenciesVersions.HILT}"
     const val KOTLIN = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${BuildDependenciesVersions.KOTLIN}"
     const val ANDROIDX_CORE = "androidx.core:core-ktx:${BuildDependenciesVersions.ANDROIDX}"
     const val APPCOMPAT = "androidx.appcompat:appcompat:${BuildDependenciesVersions.APPCOMPAT}"
