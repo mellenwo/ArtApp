@@ -1,6 +1,7 @@
 package commons
 
 import Dependencies
+import dependencies.AnnotationProcessorsDependencies
 import extensions.addTestDependencies
 
 plugins {
@@ -46,6 +47,9 @@ dependencies {
     implementation(Dependencies.COROUTINES)
     implementation(Dependencies.COROUTINES_ANDROID)
     implementation(Dependencies.TIMBER)
+    implementation(Dependencies.DAGGER)
+
+    kapt(AnnotationProcessorsDependencies.DAGGER)
 
     addTestDependencies()
 }

@@ -1,8 +1,11 @@
+import dependencies.AnnotationProcessorsDependencies
 
 plugins {
     id(BuildPlugins.ANDROID_APPLICATION)
     id(BuildPlugins.KOTLIN_ANDROID)
     id(BuildPlugins.KOTLIN_ANDROID_EXTENSIONS)
+    id(BuildPlugins.KOTLIN_KAPT)
+    id(BuildPlugins.KOTLIN_ALLOPEN)
 }
 
 // Required since Gradle 4.10+.
@@ -40,8 +43,8 @@ android {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 
-    dataBinding {
-        isEnabled = true
+    buildFeatures {
+        dataBinding = true
     }
 
     androidExtensions {
@@ -60,16 +63,21 @@ android {
 }
 
 dependencies {
-    implementation (Dependencies.KOTLIN)
-    implementation (Dependencies.ANDROIDX_CORE)
-    implementation (Dependencies.APPCOMPAT)
-    implementation (Dependencies.CONSTRAINT_LAYOUT)
-    implementation (Dependencies.PLAY_CORE)
+    implementation(project(BuildModules.CORE))
+
+    implementation(Dependencies.KOTLIN)
+    implementation(Dependencies.ANDROIDX_CORE)
+    implementation(Dependencies.APPCOMPAT)
+    implementation(Dependencies.CONSTRAINT_LAYOUT)
+    implementation(Dependencies.PLAY_CORE)
     implementation(Dependencies.NAVIGATION_FRAGMENT)
     implementation(Dependencies.NAVIGATION_UI)
-    testImplementation (Dependencies.KOIN_TEST)
-    testImplementation (Dependencies.JUNIT)
-    androidTestImplementation (Dependencies.JUNIT_EXT)
-    androidTestImplementation (Dependencies.ESPRESSO)
+    implementation(Dependencies.DAGGER)
+
+    testImplementation(Dependencies.JUNIT)
+    androidTestImplementation(Dependencies.JUNIT_EXT)
+    androidTestImplementation(Dependencies.ESPRESSO)
+
+    kapt(AnnotationProcessorsDependencies.DAGGER)
 
 }

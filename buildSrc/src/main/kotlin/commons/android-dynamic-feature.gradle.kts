@@ -50,6 +50,7 @@ android {
 dependencies {
     implementation(project(BuildModules.APP))
     implementation(project(BuildModules.Commons.UI))
+    implementation(project(BuildModules.CORE))
     implementation(Dependencies.LIFECYCLE_EXTENSIONS)
     implementation(Dependencies.LIFECYCLE_VIEWMODEL)
 

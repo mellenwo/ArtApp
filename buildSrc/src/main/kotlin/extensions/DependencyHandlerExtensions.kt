@@ -16,6 +16,16 @@ fun DependencyHandler.testImplementation(dependencyNotation: String): Dependency
     add("testImplementation", dependencyNotation)
 
 /**
+ * Adds a dependency to the `kapt` configuration.
+ *
+ * @param dependencyNotation name of dependency to add at specific configuration
+ *
+ * @return the dependency
+ */
+fun DependencyHandler.kapt(dependencyNotation: String): Dependency? =
+    add("kapt", dependencyNotation)
+
+/**
  * Adds a dependency to the `androidTestImplementation` configuration.
  *
  * @param dependencyNotation name of dependency to add at specific configuration

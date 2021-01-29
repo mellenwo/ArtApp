@@ -1,5 +1,6 @@
-include (
+include(
     ":app",
+    ":core",
     ":commons:ui",
     ":commons:views",
     ":features:home",

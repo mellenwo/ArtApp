@@ -26,6 +26,7 @@ object BuildDependenciesVersions {
     const val EXT = "1.1.0"
     const val TEST = "1.1.0"
     const val ARCH_CORE = "2.1.0"
+    const val DAGGER = "2.29.1"
     const val FRAGMENT_TEST = "1.2.5"
     const val MOCK_WEB_SERVER = "4.9.0"
     const val PLAY_CORE = "1.6.4"
