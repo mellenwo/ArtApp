@@ -4,6 +4,8 @@ import android.content.Context
 import com.google.android.play.core.splitcompat.SplitCompatApplication
 import com.mellenwood.artapp.di.DaggerAppComponent
 import com.mellenwood.core.di.CoreComponent
+import com.mellenwood.core.di.DaggerCoreComponent
+import com.mellenwood.core.di.modules.ContextModule
 
 class ArtApplication : SplitCompatApplication() {
 
@@ -18,6 +20,18 @@ class ArtApplication : SplitCompatApplication() {
         @JvmStatic
         fun coreComponent(context: Context) =
             (context.applicationContext as? ArtApplication)?.coreComponent
+    }
+
+    /**
+     * Called when the application is starting, before any activity, service, or receiver objects
+     * (excluding content providers) have been created.
+     *
+     * @see SplitCompatApplication.onCreate
+     */
+    override fun onCreate() {
+        super.onCreate()
+        initCoreDependencyInjection()
+        initAppDependencyInjection()
     }
 
     // ============================================================================================
@@ -39,7 +53,10 @@ class ArtApplication : SplitCompatApplication() {
      * Initialize core dependency injection component
      */
     private fun initCoreDependencyInjection() {
-        // TODO: implement next
+        coreComponent = DaggerCoreComponent
+            .builder()
+            .contextModule(ContextModule(this))
+            .build()
     }
 
 }

@@ -1,5 +1,6 @@
 package com.mellenwood.commons.ui.base
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,12 +11,14 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
+import javax.inject.Inject
 
 abstract class BaseFragment<B: ViewDataBinding, M: ViewModel>(
     @LayoutRes
     private val layoutId: Int
 ) : Fragment() {
 
+    @Inject
     lateinit var viewModel: M
     lateinit var viewBinding: B
 
@@ -64,6 +67,18 @@ abstract class BaseFragment<B: ViewDataBinding, M: ViewModel>(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         onInitDataBinding()
+    }
+
+    /**
+     * Called when a fragment is first attached to its context.
+     *
+     * @param context The application context.
+     *
+     * @see Fragment.onAttach
+     */
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        onInitDependencyInjection()
     }
 
     /**

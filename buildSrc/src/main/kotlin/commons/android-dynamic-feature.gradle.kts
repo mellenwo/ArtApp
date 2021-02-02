@@ -55,16 +55,21 @@ dependencies {
     implementation(Dependencies.LIFECYCLE_VIEWMODEL)
 
     implementation(Dependencies.KOTLIN)
+    implementation(Dependencies.APPCOMPAT)
     implementation(Dependencies.COROUTINES)
     implementation(Dependencies.COROUTINES_ANDROID)
     implementation(Dependencies.TIMBER)
+    implementation(Dependencies.LIFECYCLE_EXTENSIONS)
+    implementation(Dependencies.LIFECYCLE_VIEWMODEL)
     implementation(Dependencies.NAVIGATION_FRAGMENT)
     implementation(Dependencies.NAVIGATION_UI)
     implementation(Dependencies.CORE_KTX)
+    implementation(Dependencies.DAGGER)
     implementation(Dependencies.FRAGMENT_KTX)
     implementation(Dependencies.CONSTRAINT_LAYOUT)
 
     kapt(AnnotationProcessorsDependencies.DATABINDING)
+    kapt(AnnotationProcessorsDependencies.DAGGER)
 
     addTestDependencies()
 

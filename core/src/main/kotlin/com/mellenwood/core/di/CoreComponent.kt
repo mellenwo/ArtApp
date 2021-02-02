@@ -1,5 +1,6 @@
 package com.mellenwood.core.di
 
+import android.content.Context
 import com.mellenwood.core.di.modules.ContextModule
 import dagger.Component
 import javax.inject.Singleton
@@ -11,8 +12,15 @@ import javax.inject.Singleton
  */
 @Singleton
 @Component(
-    modules = [
-        ContextModule::class
-    ]
+    modules = [ContextModule::class]
 )
-interface CoreComponent
+interface CoreComponent {
+
+    /**
+     * Provide dependency graph Context
+     *
+     * @return Context
+     */
+    fun context(): Context
+
+}
