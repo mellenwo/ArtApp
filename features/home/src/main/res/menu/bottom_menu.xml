@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_art_list_graph"
+        android:icon="@drawable/ic_list"
+        android:title="@string/home_tab_art" />
+
+    <item
+        android:id="@+id/navigation_art_favorites_graph"
+        android:icon="@drawable/ic_favorites"
+        android:title="@string/home_tab_favorites" />
+
+</menu>
