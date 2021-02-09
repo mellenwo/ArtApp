@@ -11,6 +11,7 @@ object BuildModules {
     }
 
     object Features {
+        const val ART_FAVORITE = ":features:art_favorites"
         const val HOME = ":features:home"
         const val ART_LIST = ":features:art_list"
     }

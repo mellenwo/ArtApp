@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.mellenwood.dynamicfeatures.artfavorites">
+
+    <dist:module
+        dist:instant="true"
+        dist:title="@string/feature_art_favorites">
+        <dist:delivery>
+            <dist:install-time />
+        </dist:delivery>
+        <dist:fusing dist:include="false" />
+    </dist:module>
+
+    <application android:supportsRtl="true" />
+
+</manifest>

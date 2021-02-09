@@ -52,7 +52,9 @@ android {
     }
 
     dynamicFeatures = mutableSetOf(
-        BuildModules.Features.HOME, BuildModules.Features.ART_LIST
+        BuildModules.Features.HOME,
+        BuildModules.Features.ART_LIST,
+        BuildModules.Features.ART_FAVORITE
     )
 
     sourceSets {
