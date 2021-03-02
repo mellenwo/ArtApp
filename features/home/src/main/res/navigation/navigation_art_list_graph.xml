@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/navigation_art_list_graph">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_art_list_graph"
+    app:startDestination="@+id/art_list_fragment"
+    tools:ignore="UnusedNavigation,UnusedIds">
+    <fragment
+        android:id="@+id/art_list_fragment"
+        android:name="com.mellenwood.dynamicfeatures.artlist.ui.list.ArtListFragment"
+        android:label="Art">
+        <action
+            android:id="@+id/action_artListFragment_to_art_detail_fragment"
+            app:destination="@+id/art_detail_fragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@+id/art_list_fragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/character_detail_fragment"
+        android:name="com.vmadalin.dynamicfeatures.characterslist.ui.detail.CharacterDetailFragment">
+        <argument
+            android:name="character_id"
+            app:argType="long" />
+    </fragment>
 </navigation>
